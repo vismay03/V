@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vwaiter</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="./tabs/tabulous.css"> -->
+  </head>
+  <body>
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img class="w-full" src="./SVG/restaurent1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full" src="./SVG/restaurent1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full" src="./SVG/restaurent1.jpg" alt="" />
+        </div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="mb-16 swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="container relative flex justify-center restaurent-page">
+      <div class="absolute z-20 w-11/12 bg-white -top-16">
+        <section class="py-3">
+          <h3 class="text-center capitalize hotel-name">The Grand Moms</h3>
+          <h3 class="text-center capitalize hotel-address">
+            Near samay gate, sanala baypass, morbi
+          </h3>
+        </section>
+        <section class="flex justify-center">
+          <h3 class="mr-3">open</h3>
+          <h3>8am - 8pm</h3>
+        </section>
+
+        <div class="flex justify-center">
+          <section class="flex mr-2">
+            <img src="./SVG/Pin.svg" alt="" srcset="" />
+            <h4>1km</h4>
+          </section>
+          <section class="flex mr-2">
+            <img src="./SVG/Star 16px.svg" alt="" srcset="" />
+            <h4>5.0</h4>
+          </section>
+          <section class="flex">
+            <img src="./SVG/check.svg" alt="" srcset="" />
+            <h4>1km</h4>
+          </section>
+        </div>
+      </div>
+      <div id="tabs" class="mt-24">
+        <ul class="flex justify-center">
+          <li class="bg"><a href="#tabs-1" title="">Menu Items</a></li>
+          <li><a href="#tabs-2" title="">Reviews</a></li>
+          <li><a href="#tabs-3" title="">Info</a></li>
+        </ul>
+        <div id="tabs_container" class="w-full">
+          <div id="tabs-1" class="w-full">
+            <section class="flex flex-col items-end justify-center w-full menu-item">
+              <section class="flex items-center justify-between w-full">
+                <img src="./SVG/Dish1.jpg" alt="" srcset="" />
+                <section>
+                  <h1 class="capitalize menu-title">masala dhosa</h1>
+                  <h2 class="sale-price">
+                    250 <span class="line-through price">300</span>
+                  </h2>
+                  <h3>Free Delivery</h3>
+                </section>
+                <img src="./Icon/heart.svg" alt="" />
+              </section>
+              <section class="flex mt-3">
+                <img src="./Icon/Edit.svg" alt="">
+                <section class="flex ml-3">
+                  <img src="./Icon/minus.svg" alt="">
+                  <span class="px-3 py-1">1</span>
+                  <img src="./Icon/plus.svg" alt="">
+                  
+                </section>
+              </section>
+            </section>
+            <section class="flex flex-col items-end justify-center w-full mt-5 menu-item">
+              <section class="flex items-center justify-between w-full">
+                <img src="./SVG/Dish1.jpg" alt="" srcset="" />
+                <section>
+                  <h1 class="capitalize menu-title">masala dhosa</h1>
+                  <h2 class="sale-price">
+                    250 <span class="line-through price">300</span>
+                  </h2>
+                  <h3>Free Delivery</h3>
+                </section>
+                <img src="./Icon/heart.svg" alt="" />
+              </section>
+              <section class="flex mt-3">
+                <img src="./Icon/Edit.svg" alt="">
+                <section class="flex ml-3">
+                  <img src="./Icon/minus.svg" alt="">
+                  <span class="px-3 py-1">1</span>
+                  <img src="./Icon/plus.svg" alt="">
+                  
+                </section>
+              </section>
+            </section>
+          </div>
+          <div id="tabs-2"><!--tab content-->2</div>
+          <div id="tabs-3">
+            3
+            <!--tab content-->
+          </div>
+        </div>
+        <!--End tabs container-->
+      </div>
+      <!--End tabs-->
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    ></script>
+
+    <script type="text/javascript" src="./tabs/tabulous.js"></script>
+    <script type="text/javascript" src="./tabs/js.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#tabs").tabulous();
+      });
+    </script>
+  </body>
+</html>
